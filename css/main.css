@@ -259,7 +259,37 @@ button[type="submit"] {
     font-weight: 400;
   }
 
-  .hero-container form button {
+  .hero-container form div{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-container form input {
+    width: 60%;
+    position: absolute;
+  }
+
+  button[type="submit"] {
+    position: relative;
+    left: 128px;
+    top: 6px;
+    width: 30%;
+    padding: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-container {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .hero-wrapper {
+    
   }
 }
