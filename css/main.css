@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Téléphone */
+.hidden {
+  display: none;
+}
+
+:root {
+  /* Burger Menu */
+  --burger-menu-bgc: #1b262f;
+  --schedule-a-demo: #ba4270;
+  --burger-menu-text: #fbfcfe;
+  --responsive-burger-menu-color: ;
+
+  /* Body */
+  --body-color: #edf3f8;
+
+  /* Hero */
+  --hero-color: #36536b;
+  --hero-weight-color: #6c8294;
+  --schedule-button: #ba4270;
+}
+
+/* Home Page */
+body {
+  background-color: var(--body-color);
+}
+
+/* Navigation */
+.header-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.desktop-navigation {
+  display: none;
+}
+
+/* Burger Menu */
+.burger-btn {
+  cursor: pointer;
+}
+
+.burger-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: var(--burger-menu-bgc);
+  width: 70%;
+  height: 100%;
+}
+
+.close-btn {
+  margin-left: auto;
+  cursor: pointer;
+  padding-top: 48px;
+  margin-bottom: 24px;
+}
+
+hr {
+  opacity: 0.15;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.burger-container ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.burger-container a {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--burger-menu-text);
+}
+
+.burger-container li {
+  margin-top: 24px;
+}
+
+.schedule-cta {
+  display: block;
+  background-color: var(--schedule-a-demo);
+  padding: 16px 36px 14px 38px;
+  border-radius: 24px;
+}
+
+/* Tablette */
+@media screen and (min-width: 768px) {
+  .burger-btn,
+  .close-btn,
+  hr {
+    display: none;
+  }
+
+  .desktop-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0px;
+    width: 70%;
+  }
+
+  .desktop-navigation div {
+    display: flex;
+    gap: 36px;
+  }
+
+  .desktop-navigation li {
+    list-style-type: none;
+  }
+
+  .cta {
+    font-family: "Public Sans", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--responsive-burger-menu-color);
+    opacity: 0.7;
+  }
+
+  .schedule-cta {
+    color: white;
+    margin-left: 38px;
+    font-family: "Public Sans", sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+
+/* Ordinateur */
+@media screen and (min-width: 1024px) {
+  .header-navigation {
+    width: 80%;
+    max-width: 1100px;
+  }
+
+  .desktop-navigation {
+    width: 85%;
+  }
+
+  .desktop-navigation div {
+    margin-left: 24px;
+  }
+
+  .cta {
+    opacity: 0.7;
+  }
+
+  .cta:hover {
+    color: var(--burger-menu-bgc);
+    opacity: 1;
+  }
+
+  .schedule-cta:hover {
+    background-color: rgba(186, 66, 112, 0.5);
+  }
+}
+
+/* Hero téléphone */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Public Sans", sans-serif;
+}
+
+.hero-container img {
+  width: 300px;
+  /* margin-left: 46px; */
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-container h1 {
+  margin: 0;
+  text-align: center;
+  font-family: "DM Serif Display", serif;
+  color: var(--hero-color);
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 24px;
+  font-size: 32px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-container form label {
+  display: none;
+}
+
+.hero-container form div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-container form input {
+  padding: 12px;
+  border-radius: 24px;
+  width: 90%;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  outline: none;
+  margin-bottom: 12px;
+  color: var(--hero-color);
+}
+
+button[type="submit"] {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 24px;
+  font-weight: 700;
+  display: block;
+  width: 90%;
+  background-color: var(--schedule-button);
+  padding: 16px 36px 14px 38px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact {
+  text-align: center;
+  color: var(--hero-weight-color);
+  padding-bottom: 36px;
+}
+
+.contact a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--hero-weight-color);
+}
+
+/* Tablette */
+@media screen and (min-width: 768px) {
+  .hero-container h1 {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 400;
+  }
+
+  .hero-container form button {
+    display: flex;
+  }
+}

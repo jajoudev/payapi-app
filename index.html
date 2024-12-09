@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-navigation">
+        <img src="/assets/shared/desktop/logo.svg" />
+        <ul class="desktop-navigation">
+          <div>
+            <li><a class="cta" href="/pages/pricing.html">Pricing</a></li>
+            <li><a class="cta" href="/pages/about.html">About</a></li>
+            <li><a class="cta" href="/pages/contact.html">Contact</a></li>
+          </div>
+          <li><a class="schedule-cta" href="#">Schedule a Demo</a></li>
+        </ul>
+        <img class="burger-btn" src="/assets/shared/mobile/menu.svg" />
+      </div>
+      <div class="burger-container hidden">
+        <img class="close-btn" src="/assets/shared/mobile/close.svg" />
+        <hr />
+        <nav role="navigation">
+          <ul>
+            <div>
+              <li><a href="/pages/pricing.html">Pricing</a></li>
+              <li><a href="/pages/about.html">About</a></li>
+              <li><a href="/pages/contact.html">Contact</a></li>
+            </div>
+            <li><a class="schedule-cta" href="#">Schedule a Demo</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero-container">
+        <img
+          src="/assets/home/desktop/illustration-phone-mockup.svg"
+          alt="A phone that shows the time and receives a notification that says “The Payment has been processed. The total amount deducted form your account is US $104.90.”"
+        />
+        <div class="hero-wrapper">
+          <h1>Start building with our APIs for absolutely free.</h1>
+          <form>
+            <label for="email">Email</label>
+            <div>
+              <input
+                type="email"
+                name="email"
+                class="email"
+                id="email"
+                placeholder="Enter email adress"
+              />
+              <!-- <div> -->
+              <button type="submit">Schedule a demo</button>
+              <!-- </div> -->
+            </div>
+
+            <p class="contact">
+              Have any Questions ? <a href="#">Contact us</a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
