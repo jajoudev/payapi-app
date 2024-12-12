@@ -24,6 +24,10 @@
   /* Brands */
   --brands-bgc: #1b262f;
   --brands-text-color: #fbfcfe;
+
+  /* API Section */
+  --api-section-title: #36536B;
+  --api-section-text: #6C8294;
 }
 
 /* Home Page */
@@ -394,6 +398,10 @@ button[type="submit"] {
   font-family: "Public Sans", sans-serif;
 }
 
+.about-cta:hover {
+  opacity: 0.7;
+}
+
 /* Tablette */
 @media screen and (min-width: 768px) {
   .brands-wrapper {
@@ -418,7 +426,8 @@ button[type="submit"] {
     align-items: center;
     justify-content: center;
     flex-direction: row-reverse;
-    width: 65%;
+    width: 80%;
+    max-width: 1100px;
   }
 
   .partners-pictures {
@@ -429,10 +438,6 @@ button[type="submit"] {
   .partners-picture:nth-child(5),
   .partners-picture:nth-child(6) {
     margin-right: 14px;
-  }
-
-  .brands-informations {
-    margin-left: 46px;
   }
 
   .brands-description,
@@ -447,5 +452,85 @@ button[type="submit"] {
   .brands-description,
   .about-cta {
     margin-left: 0px;
+  }
+}
+
+/* Sections */
+.api-section, .illustration-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 64px;
+}
+
+.api-section img {
+  width: 328px;
+  height: 209px;
+}
+
+.illustration-section img, .api-section img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.api-section h2, .illustration-section h2 {
+  font-size: 36px;
+  font-family: "DM Serif Display", serif;
+  color: var(--api-section-title);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.api-section p, .illustration-section p {
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
+  width: 90%;
+  color: var(--api-section-text);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  /* Sections */
+  .api-section img {
+    width: 600px;
+    height: 500px;
+  }
+
+  .api-section h2, .illustration-section h2 {
+    font-size: 48px;
+  }
+
+  .api-section p, .illustration-section p {
+    width: 78%;
+    line-height: 28px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .api-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .api-section p, .illustration-wrapper p {
+    text-align: left;
+  }
+
+  .api-section h2, .illustration-wrapper h2 {
+    text-align: left;
+    margin-left: 80px;
+  }
+
+  .illustration-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
   }
 }
