@@ -1,8 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Téléphone */
+html,
+body {
+  cursor: url("/assets/cursor/macOS.svg"), auto;
+}
+
 .hidden {
+  display: none;
+}
+
+label {
   display: none;
 }
 
@@ -26,8 +34,16 @@
   --brands-text-color: #fbfcfe;
 
   /* API Section */
-  --api-section-title: #36536B;
-  --api-section-text: #6C8294;
+  --api-section-title: #36536b;
+  --api-section-text: #6c8294;
+
+  /* Benefits Sections */
+  --benefits-title-color: #36536b;
+  --benefits-text-color: #6c8294;
+
+  /* Ready To Start ? */
+  --ready-title: #36536b;
+  --cta-demo: #ba4270;
 }
 
 /* Home Page */
@@ -209,10 +225,6 @@ nav {
   margin-right: auto;
 }
 
-.hero-container form label {
-  display: none;
-}
-
 .hero-container form div {
   display: flex;
   align-items: center;
@@ -220,16 +232,24 @@ nav {
   flex-direction: column;
 }
 
-.hero-container form input {
+input[type="email"] {
   padding: 12px;
   border-radius: 24px;
-  width: 90%;
+  width: 350px;
   border: none;
   font-size: 15px;
   font-weight: 700;
   outline: none;
   margin-bottom: 12px;
   color: var(--hero-color);
+  font-family: "Public Sans", sans-serif;
+}
+
+.error-message {
+  margin-bottom: 12px;
+  text-align: center;
+  color: red;
+  font-weight: 700;
 }
 
 button[type="submit"] {
@@ -239,12 +259,13 @@ button[type="submit"] {
   margin-bottom: 24px;
   font-weight: 700;
   display: block;
-  width: 90%;
+  width: 350px;
   background-color: var(--schedule-button);
   padding: 16px 36px 14px 38px;
   border-radius: 24px;
   border: none;
   cursor: pointer;
+  font-family: "Public Sans", sans-serif;
 }
 
 .contact {
@@ -276,7 +297,7 @@ button[type="submit"] {
     margin-right: auto;
   }
 
-  .hero-container form input {
+  input[type="email"] {
     width: 500px;
     position: absolute;
   }
@@ -285,7 +306,7 @@ button[type="submit"] {
     position: relative;
     left: 128px;
     top: 6px;
-    width: 30%;
+    width: 250px;
     padding: 12px;
   }
 }
@@ -318,12 +339,12 @@ button[type="submit"] {
     line-height: 72px;
   }
 
-  .hero-container form input {
+  input[type="email"] {
     width: 400px;
     margin-left: -12px;
   }
 
-  .hero-container form button {
+  button[type="submit"] {
     top: 0px;
     left: 232px;
     margin-bottom: 0px;
@@ -456,12 +477,35 @@ button[type="submit"] {
 }
 
 /* Sections */
-.api-section, .illustration-section {
+.api-section,
+.illustration-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 64px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.illustration-section {
+  max-width: 1100px;
+}
+
+.api-section {
+  padding-top: 64px;
+}
+
+.illustration-wrapper {
+  padding-bottom: 64px;
+}
+
+.illustration-wrapper div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
 }
 
 .api-section img {
@@ -469,12 +513,18 @@ button[type="submit"] {
   height: 209px;
 }
 
-.illustration-section img, .api-section img {
+.illustration-section img,
+.api-section img {
   margin-left: auto;
   margin-right: auto;
 }
 
-.api-section h2, .illustration-section h2 {
+.api-section img {
+  margin-bottom: 48px;
+}
+
+.api-section h2,
+.illustration-section h2 {
   font-size: 36px;
   font-family: "DM Serif Display", serif;
   color: var(--api-section-title);
@@ -482,55 +532,228 @@ button[type="submit"] {
   text-align: center;
 }
 
-.api-section p, .illustration-section p {
+.api-section p,
+.illustration-section p {
   font-family: "Public Sans", sans-serif;
   text-align: center;
-  width: 90%;
   color: var(--api-section-text);
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 16px;
 }
 
+/* Tablette */
 @media screen and (min-width: 768px) {
-  /* Sections */
-  .api-section img {
-    width: 600px;
-    height: 500px;
+  .api-section,
+  .illustration-section {
+    width: 70%;
   }
 
-  .api-section h2, .illustration-section h2 {
+  .api-wrapper img {
+    width: 600px;
+    height: 260px;
+  }
+
+  .illustration-wrapper div img:first-child,
+  .illustration-wrapper div img:nth-child(2) {
+    width: 150px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .illustration-wrapper div:first-child {
+    margin-left: 32px;
+    gap: 32px;
+  }
+
+  .api-section h2,
+  .illustration-section h2 {
     font-size: 48px;
   }
 
-  .api-section p, .illustration-section p {
-    width: 78%;
+  .api-section p,
+  .illustration-section p {
     line-height: 28px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
+/* Ordinateur */
 @media screen and (min-width: 1024px) {
+  .api-section {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
+
   .api-wrapper {
-    width: 80%;
+    width: 60%;
+    gap: 126px;
+    padding-bottom: 64px;
+  }
+
+  .illustration-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 126px;
+  }
+
+  .api-wrapper,
+  .illustration-section {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
 
-  .api-section p, .illustration-wrapper p {
+  .api-section p,
+  .illustration-wrapper p {
     text-align: left;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
   }
 
-  .api-section h2, .illustration-wrapper h2 {
-    text-align: left;
-    margin-left: 80px;
+  .api-wrapper img {
+    width: 900px;
+    height: 300px;
   }
 
-  .illustration-wrapper {
-    width: 80%;
+  .illustration-wrapper div {
+    flex-wrap: nowrap;
+  }
+
+  .illustration-wrapper div img:first-child,
+  .illustration-wrapper div img:nth-child(2) {
+    width: 500px;
+  }
+
+  .api-section h2,
+  .illustration-wrapper h2 {
+    text-align: left;
+  }
+}
+
+/* Benefits Sections */
+
+.benefits-sections {
+  padding-bottom: 64px;
+  max-width: 1100px;
+}
+
+.finances-benefits,
+.banking-benefits,
+.payments-benefits {
+  font-family: "Public Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-bottom: 32px;
+}
+
+.finances-benefits img,
+.banking-benefits img,
+.payments-benefits img {
+  margin-bottom: 32px;
+  width: 106px;
+}
+
+.finances-benefits h3,
+.banking-benefits h3,
+.payments-benefits h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--benefits-title-color);
+}
+
+.finances-benefits p,
+.banking-benefits p,
+.payments-benefits p {
+  font-size: 16px;
+  color: var(--benefits-text-color);
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Tablette */
+@media screen and (min-width: 768px) {
+  .benefits-sections {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 8px;
+  }
+
+  .banking-benefits {
+    margin-bottom: auto;
+  }
+}
+
+/* Ordinateur */
+@media screen and (min-width: 1024px) {
+  .benefits-sections {
+    width: 70%;
+    gap: 36px;
+  }
+}
+
+/* Ready To Start ? */
+.ready-form h2 {
+  color: var(--ready-title);
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.responsive-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Tablette */
+@media screen and (min-width: 768px) {
+  .ready-form h2 {
+    font-size: 48px;
+  }
+
+  input[type="email"]:nth-child(2) {
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    width: 400px;
+  }
+
+  .ready-form form button {
+    width: 170px;
+  }
+}
+
+/* Ordinateur */
+@media screen and (min-width: 1024px) {
+  .ready-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+  }
+
+  .ready-form h2 {
+    margin-left: auto;
+  }
+
+  input[type="email"]:nth-child(2) {
+    width: 500px;
+  }
+
+  .ready-form form button {
+    left: 100px;
   }
 }
