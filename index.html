@@ -51,19 +51,19 @@
         <div class="hero-wrapper">
           <h1>Start building with our APIs for absolutely free.</h1>
           <form>
-            <div class="responsive-form">
+            <div class="first-form">
               <label for="email">Email</label>
               <input
                 type="email"
                 name="email"
-                class="email"
+                class="email first-input"
                 id="email"
                 placeholder="Enter email adress"
               />
               <p class="error-message hidden">
                 The field has been filled in incorrectly
               </p>
-              <button type="submit">Schedule a demo</button>
+              <button type="submit" class="first-btn">Schedule a demo</button>
             </div>
 
             <p class="contact">
@@ -130,7 +130,7 @@
       </section>
       <section class="illustration-section">
         <div class="illustration-wrapper">
-          <div>
+          <div class="illustration-images">
             <img
               src="/assets/home/desktop/illustration-phone-payments.svg"
               alt="A phone that shows the payments made with its total"
@@ -184,7 +184,7 @@
       <div class="ready-form">
         <h2>Ready to start?</h2>
         <form>
-          <div class="responsive-form">
+          <div class="second-form">
             <label for="email">Email</label>
             <input
               type="email"
@@ -196,11 +196,44 @@
             <p class="error-message hidden">
               The field has been filled in incorrectly
             </p>
-            <button type="submit">Schedule a demo</button>
+            <button class="second-btn" type="submit">Schedule a demo</button>
           </div>
         </form>
       </div>
     </main>
+    <footer>
+      <div class="footer-responsive">
+        <div>
+          <img src="/assets/shared/desktop/white-logo.svg" />
+          <ul class="links-wrapper">
+            <li><a href="/pages/pricing.html">Pricing</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <ul class="icons-container">
+          <li class="icon-wrapper">
+            <a href="#">
+              <img
+                src="/assets/shared/desktop/facebook.svg"
+                alt="facebook icon"
+            /></a>
+          </li>
+          <li class="icon-wrapper">
+            <a href="#">
+              <img src="/assets/shared/desktop/twitter.svg" alt="twitter icon"
+            /></a>
+          </li>
+          <li class="icon-wrapper">
+            <a href="#">
+              <img
+                src="/assets/shared/desktop/linkedin.svg"
+                alt="linkedin icon"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <script src="/js/app.js"></script>
   </body>

@@ -16,25 +16,42 @@ closeMenuIcon.addEventListener("click", () => {
 });
 
 // ErrorMessage
-const form = document.querySelector("form");
+// const form = document.querySelector("form");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
 
-  const inputEmail = document.querySelector(".email");
-  const errorMessage = document.querySelector(".error-message");
-  const btnSubmit = document.querySelector("button");
+//   const inputEmail = document.querySelector(".email");
+//   const errorMessage = document.querySelector(".error-message");
+//   const btnSubmit = document.querySelector("button");
 
-  btnSubmit.addEventListener("click", () => {
-    if (btnSubmit.click) {
-      if (
-        inputEmail.value === "" &&
-        inputEmail.value === inputEmail.value.toUpperCase()
-      ) {
-        errorMessage.classList.remove("hidden");
-      } else if (inputEmail !== "") {
-        errorMessage.classList.add("hidden");
-      }
-    }
-  });
-});
+//   btnSubmit.addEventListener("click", () => {
+//     if (btnSubmit.click) {
+//       if (
+//         inputEmail.value === "" &&
+//         inputEmail.value === inputEmail.value.toUpperCase()
+//       ) {
+//         errorMessage.classList.remove("hidden");
+//       } else if (inputEmail !== "") {
+//         errorMessage.classList.add("hidden");
+//       }
+//     }
+//   });
+// });
+
+// PRICING PAGE
+
+// DisplayCheck
+const displayCheck = document.querySelector('.check')
+const benefitCheck = document.querySelector('.benefit-check')
+
+benefitCheck.addEventListener('click', () => {
+  if(benefitCheck.classList.contains('benefit-check')) {
+    displayCheck.classList.remove('hidden')
+  } else {
+    displayCheck.classList.add('hidden')
+  }
+})
+
+
+

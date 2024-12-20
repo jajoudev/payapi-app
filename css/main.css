@@ -44,6 +44,10 @@ label {
   /* Ready To Start ? */
   --ready-title: #36536b;
   --cta-demo: #ba4270;
+
+  /* Footer */
+  --footer-bgc: #1b262f;
+  --list-color: #fbfcfe;
 }
 
 /* Home Page */
@@ -232,10 +236,16 @@ nav {
   flex-direction: column;
 }
 
-input[type="email"] {
+.first-form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.first-form .email {
   padding: 12px;
   border-radius: 24px;
-  width: 350px;
+  width: 100%;
   border: none;
   font-size: 15px;
   font-weight: 700;
@@ -252,14 +262,14 @@ input[type="email"] {
   font-weight: 700;
 }
 
-button[type="submit"] {
+.first-btn {
   text-align: center;
   color: white;
   text-decoration: none;
   margin-bottom: 24px;
   font-weight: 700;
   display: block;
-  width: 350px;
+  width: 100%;
   background-color: var(--schedule-button);
   padding: 16px 36px 14px 38px;
   border-radius: 24px;
@@ -288,21 +298,19 @@ button[type="submit"] {
     font-weight: 400;
   }
 
-  .hero-container form div {
+  .first-form {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
   }
 
-  input[type="email"] {
+  .first-form .email {
     width: 500px;
     position: absolute;
   }
 
-  button[type="submit"] {
+  .first-btn {
     position: relative;
     left: 128px;
     top: 6px;
@@ -339,12 +347,16 @@ button[type="submit"] {
     line-height: 72px;
   }
 
-  input[type="email"] {
+  .first-form .email {
     width: 400px;
     margin-left: -12px;
   }
 
-  button[type="submit"] {
+  .first-form {
+    margin-left: 0px;
+  }
+
+  .first-btn {
     top: 0px;
     left: 232px;
     margin-bottom: 0px;
@@ -501,7 +513,7 @@ button[type="submit"] {
   padding-bottom: 64px;
 }
 
-.illustration-wrapper div:first-child {
+.illustration-images {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -552,14 +564,14 @@ button[type="submit"] {
     height: 260px;
   }
 
-  .illustration-wrapper div img:first-child,
-  .illustration-wrapper div img:nth-child(2) {
+  .illustration-wrapper .illustration-images img:first-child,
+  .illustration-wrapper .illustration-images img:nth-child(2) {
     width: 150px;
     margin-left: 0px;
     margin-right: 0px;
   }
 
-  .illustration-wrapper div:first-child {
+  .illustration-images {
     margin-left: 32px;
     gap: 32px;
   }
@@ -624,8 +636,8 @@ button[type="submit"] {
     flex-wrap: nowrap;
   }
 
-  .illustration-wrapper div img:first-child,
-  .illustration-wrapper div img:nth-child(2) {
+  .illustration-wrapper .illustration-images img:first-child,
+  .illustration-wrapper .illustration-images img:nth-child(2) {
     width: 500px;
   }
 
@@ -635,7 +647,7 @@ button[type="submit"] {
   }
 }
 
-/* Benefits Sections */
+/* Benefits Sections téléphone */
 
 .benefits-sections {
   padding-bottom: 64px;
@@ -704,8 +716,9 @@ button[type="submit"] {
     gap: 36px;
   }
 }
+/*-------------------------------------*/
 
-/* Ready To Start ? */
+/* Ready To Start ? téléphone */
 .ready-form h2 {
   color: var(--ready-title);
   font-size: 32px;
@@ -713,47 +726,274 @@ button[type="submit"] {
   margin-bottom: 32px;
 }
 
-.responsive-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.second-form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
 }
+
+.second-form .email {
+  padding: 12px;
+  border-radius: 24px;
+  width: 100%;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  outline: none;
+  margin-bottom: 12px;
+  color: var(--hero-color);
+  font-family: "Public Sans", sans-serif;
+}
+
+.second-btn {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 24px;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  background-color: var(--cta-demo);
+  padding: 16px 36px 14px 38px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  font-family: "Public Sans", sans-serif;
+}
+
+/*-------------------------------------*/
+
 /* Tablette */
 @media screen and (min-width: 768px) {
+  .ready-form {
+    padding-bottom: 64px;
+  }
+
   .ready-form h2 {
     font-size: 48px;
   }
 
-  input[type="email"]:nth-child(2) {
-    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
-    width: 400px;
+  .second-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
   }
 
-  .ready-form form button {
-    width: 170px;
+  .second-form .email {
+    width: 100%;
+  }
+
+  .second-btn {
+    padding: 12px 16px;
+    width: fit-content;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
+
+/*-------------------------------------*/
 
 /* Ordinateur */
 @media screen and (min-width: 1024px) {
   .ready-form {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: row;
-    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 1100px;
+    padding-bottom: 64px;
   }
 
   .ready-form h2 {
+    margin-bottom: 0;
+  }
+
+  .ready-form form {
+    width: 50%;
+  }
+
+  .second-form .email {
+    width: 100%;
+  }
+}
+
+/* Beginnining style footer */
+footer {
+  background-color: var(--footer-bgc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 32px 0px 32px 0px;
+}
+
+/* End style footer */
+
+/* Begin list of pages style (links) */
+.links-wrapper {
+  padding-left: 0px;
+}
+
+.links-wrapper li {
+  list-style-type: none;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Style Links */
+.links-wrapper li a {
+  text-decoration: none;
+  color: var(--list-color);
+  font-family: "Public Sans", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+/* End Style links */
+
+/* End style list Of pages */
+
+/* Begin style socials medias icons */
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 0px;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+
+.icon-wrapper {
+  list-style: none;
+  /* padding-top: 24px; */
+}
+
+/* End Style Social Medias icons */
+
+/* Begin restyle the footer but for tablet media */
+@media screen and (min-width: 768px) {
+  /* Begin style footer */
+  .footer-responsive div, .icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-responsive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+  /* End style footer */
+
+  /* Begin style logo of website */
+  .footer-responsive div img {
+    margin-right: 32px;
+  }
+  /* End style logo of website */
+
+
+  /* List of pages style (links) */
+  .links-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .links-wrapper li {
+    margin: 0px;
+  }
+  /* End style list of pages */
+
+  /* Begin Style List of Icons */
+  .icons-container {
+    margin-top: unset;
+  }
+
+  .icon-wrapper {
+    list-style: none;
+  }
+  /* End Style List of Icons */
+}
+
+/* End restyle the footer for tablet media */
+
+/* Begin restyle the footer but for computer media */
+@media screen and (min-width: 1024px) {
+  /* Beginnining style footer */
+  footer {
+    justify-content: space-evenly;
+  }
+
+  .footer-responsive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 1100px;
   }
 
-  input[type="email"]:nth-child(2) {
-    width: 500px;
+  .footer-responsive div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .ready-form form button {
-    left: 100px;
+  /* End style footer */
+
+  /* Begin style Logo of website */
+  .footer-responsive div img {
+    margin-right: 32px;
   }
+  /* End Style logo of website */
+
+
+  /* Style list of icons */
+  .icons-container {
+    margin-right: 32px;
+  }
+  /* End style list of icons */
+}
+
+/* PRICING PAGE */
+
+.check {
+  display: none;
+}
+
+.plans-prices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.benefits-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-checks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-checks p {
+  cursor: pointer;
 }
